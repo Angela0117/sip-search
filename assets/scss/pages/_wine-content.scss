@@ -159,7 +159,7 @@
 }
 
 /* 留言輸入框設置 */
-textarea {
+.comment-box textarea {
   width: 100%;
   height:100%;
   border-radius: 5px;
@@ -230,4 +230,10 @@ textarea {
 
 .comment-btn:active{
   color: $neutral-3;
+}
+
+
+//
+.card-bg{
+  background: $primary-4;
 }
