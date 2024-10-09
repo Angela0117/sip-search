@@ -135,7 +135,12 @@
   & img{
     width: 80px;
     height: 80px;
+    @media (max-width: 768px){
+      width: 40px;
+      height: 40px;
   }
+  }
+  
 
 }
 
@@ -158,7 +163,7 @@
 }
 
 /* 留言框區塊 */
-.comment-box {
+.comments-box {
   border: 1px solid #9b5b34;
   border-radius: 5px;
   background-color: #fff;
@@ -202,7 +207,7 @@
 
 //
 
-.wine-comment-list{
+.wine-comments-list{
   flex-direction: column;
   gap: 40px;
   margin-top: 48px;
@@ -217,12 +222,32 @@
     padding: 12px 24px;
     border-radius: 20px;
   }
+  &-item{
+    //display: flex;
+    flex-direction: row;
+    align-items: center;
+    @media (max-width: 768px){
+      flex-direction: column;
+      align-items: start;
+    }
+
+  }
+  &-area{
+    @media (max-width: 768px){
+      width: 100%;
+    }
+
+  }
+  &-date{
+    display: none;
+    @media (max-width: 768px){
+      display: block;
+    }  
+  }
 
 }
 
-
-
-.wine-comment-btn{
+.wine-comments-btn{
   color: $primary-4;
   &:hover{
     color: $primary-3;
@@ -233,6 +258,16 @@
 }
 
 // 第三區 -推薦酒譜
+
+.special-list-btn{
+  color: $primary-1;
+  &:hover{
+    color: $primary-3;
+  }
+  &:active{
+    color: $neutral-3;
+  }
+}
 
 .special-list-card-bg{
   background: $primary-4;
